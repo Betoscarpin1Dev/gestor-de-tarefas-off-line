@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #1f2937;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 16px;
+}
+
+.caixa-tarefas {
+    background-color: #ffff;
+    width: 100%;
+    max-width: 500px;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.9);
+}
+
+header {
+    margin-bottom: 24px;
+    border-bottom: #e5e7eb;
+    padding-bottom: 16px;
+
+}
+
+header h1 {
+    font-size: 28px;
+    color: #2457c5;
+}
+
+header p {
+    font-size: 20px;
+    color: #6b7280;
+    margin-top: 4px;
+}
+
+.grupo-input input {
+    flex: 1;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+
+}
+
+.grupo-input input:focus {
+    border-color: #2563eb;
+}
+
+.grupo-input button {
+    background-color: #2563eb;
+    color: #ffff;
+    border: none;
+    padding: 0 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.grupo-input button:hover {
+    background-color: #1d4ed8;
+}
+
+.filtros {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.btn-filtro {
+    flex: 1;
+    padding: 8px;
+    background-color: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    color: #4b5563;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-filtro.ativo {
+    background-color: #2563eb;
+    color: #ffffff;
+    border-color: #2563eb;
+    font-weight: 600;
+}
+
+.lista-tarefas {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item-tarefa {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.item-tarefa.concluida {
+    background-color: #f3f4f6;
+    opacity: 0.75;
+}
+
+.item-tarefa.concluida span {
+    text-decoration: line-through;
+    color: #9ca3af;
+}
+
+.texto-tarefa {
+    flex: 1;
+    cursor: pointer;
+    word-break: break-word;
+    padding-right: 12px;
+}
+
+.btn-excluir {
+    background-color: transparent;
+    border: none;
+    color: #ef4444;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.btn-excluir:hover {
+    background-color: #fee2e2;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 16px 12px;
+    }
+
+    .caixa-tarefas {
+        padding: 20px 16px;
+    }
+
+
+    .grupo-input {
+        flex-direction: column;
+    }
+
+        .grupo-input input,
+    .grupo-input button {
+        width: 100%;
+        min-height: 46px;
+    }
+}
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Gestor de Tarefas</title>
+</head>
+
+<body>
+
+    <div class="caixa-tarefas">
+    <header>
+        <h1>Minhas Tarefas</h1>
+        <p id="contador-tarefas">0 tarefas pendentes</p>
+    </header>
+
+    <form id="form-tarefa" class="grupo-input">
+    <input type="text" 
+    id="input-tarefa" 
+    placeholder="Digite uma nova tarefa..." 
+    required autocomplete="off" />
+
+    <button type="submit" id="btn-adicionar">Adicionar</button>
+    </form>
+
+    <div class="filtros" aria-label="Filtrar tarefas">
+        <button type="button" class="btn-filtro ativo" data-filtro="todas">Todas</button>
+        <button type="button" class="btn-filtro" data-filtro="pendentes">Pendentes</button>
+        <button type="button" class="btn-filtro" data-filtro="concluidas">Concluidas</button>
+    </div>
+
+    <ol id="lista-tarefas" class="lista-tarefas">
+        <!-- As tarefas serão inseridas aqui pelo JavaScript--> 
+
+    </ol>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
